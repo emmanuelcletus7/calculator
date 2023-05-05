@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <marquee behavior="" direction="">
+        <p id="ossy">Welcome</p>
+    </marquee>
+
+    <div class="mx-auto w-[50%] ">
+        <input type="password" name="password" id="pass" placeholder="Input Password" type="password" value=""
+            class="p-3 border w-[80%]  my-5 mx-auto">
+
+        <i class="fa-solid fa-eye" id="show" onclick="pass.type = 'text'"></i>
+        <i class="fa-solid fa-eye-slash" id="hide" style="display: none;" onclick="show.show"></i>
+    </div>
+
+    <p id="demo">Javascript</p>
+
+    <button onclick="myFunction(4,3)" class="bg-red-500 p-3 text-white">click me</button>
+
+    <button onclick="Port()" class="bg-red-500 p-3 text-white">click</button>
+    <script>
+        // document.getElementById('ossy').style.backgroundColor = "red";
+
+        // let ben = {
+        //     name: 'Benny',
+        //     age: 50,
+        //     Phone: "08146713085",
+        //     Address: "Ph"
+        // };
+
+        // document.write(ben.age + ' ' + '<br>' + ben.Phone + ' ' + '<br>' + ben.Address);
+
+        // let me = null;
+
+        // document.write(typeof me)
+
+        function myFunction(a, b) {
+            var x = (a * b);
+            document.getElementById("demo").innerHTML = x;
+            return x;
+        }
+
+
+        var x = 33;
+
+
+        function Port() {
+            var x = 20;
+            document.write(x);
+        }
+        document.write(x);
+
+
+        var human = {
+            f_name: "Osita",
+            l_name: "Cletus",
+            Age: 44,
+            phone: "08146713085",
+            full_name: function () {
+                return this.f_name +' ' + this.l_name;
+            }
+        }
+        document.write(human.full_name());
+
+    </script>
+</body>
+
+</html>
