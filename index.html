@@ -16,39 +16,39 @@
 <body>
     <div class="bg-black w-[20%] mx-auto my-10 rounded">
         <div>
-            <input type="text" name="text" id="text" placeholder="0"
+            <input type="text" name="calc" id="calc" value="" placeholder="0"
                 class="p-5 block mx-auto text-right bg-black text-white text-5xl  border w-[100%] rounded-t">
         </div>
 
         <div class=" my-2 gap-2 p-3">
             <div class="flex gap-3 my-2">
-                <button class="bg-slate-400 text-black w-[80px] h-[80px] rounded-full text-[200%] font-bold">C</button>
-                <button class="bg-slate-400 text-black w-[80px] h-[80px] rounded-full text-[200%] font-bold">+/-</button>
-                <button class="bg-slate-400 text-black w-[80px] h-[80px] rounded-full text-[200%] font-bold">%</button>
-                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%]  font-bold">÷</button>
+                <button class="bg-slate-400 text-black w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value=''">AC</button>
+                <button class="bg-slate-400 text-black w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value=calc.value.toString().slice(0,-1)">DEL</button>
+                <button class="bg-slate-400 text-black w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value=calc.value/100">%</button>
+                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%]  font-bold"  onclick="calc.value+='/'">÷</button>
             </div>
             <div class="flex gap-3 my-2">
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="7">7</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="8">8</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="9">9</button>
-                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold">×</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='7'">7</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='8'">8</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='9'">9</button>
+                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value+='*'">×</button>
             </div>
             <div class="flex gap-3 my-2">
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="4">4</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="5">5</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="6">6</button>
-                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold">−</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='4'">4</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='5'">5</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='6'">6</button>
+                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value+='-'">−</button>
             </div>
             <div class="flex gap-3 my-2">
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="1">1</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="2">2</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" value="3">3</button>
-                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold ">+</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='1'">1</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='2'">2</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold" onclick="calc.value+='3'">3</button>
+                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value+='+'">+</button>
             </div>
             <div class="flex gap-3 my-2">
-                <button class="bg-slate-800 text-white w-[170px] h-[80px] rounded-full text-[200%] font-bold pl-9 text-left" value="0">0</button>
-                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold">.</button>
-                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold">=</button>
+                <button class="bg-slate-800 text-white w-[170px] h-[80px] rounded-full text-[200%] font-bold pl-9 text-left" onclick="calc.value+='0'">0</button>
+                <button class="bg-slate-800 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value+= '.'">.</button>
+                <button class="bg-orange-400 text-white w-[80px] h-[80px] rounded-full text-[200%] font-bold"  onclick="calc.value=eval(calc.value)">=</button>
             </div>
         </div>
     </div>
